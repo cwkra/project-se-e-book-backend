@@ -66,7 +66,6 @@ public class AddBookTest {
         submitButton2.click();
 
 
-
         WebElement nameField = wait.until(webDriver ->
                 webDriver.findElement(By.id("inputName")));
         WebElement priceField = driver.findElement(By.id("inputPrice"));
@@ -79,7 +78,7 @@ public class AddBookTest {
         priceField.sendKeys("");
 
         nameField.sendKeys("Clean Code2");
-        priceField.sendKeys("2145");
+        priceField.sendKeys(String.valueOf(Integer.parseInt("2145")));
         categoryField.sendKeys("Science Fiction");
         authorField.sendKeys("Robert Martin");
 
