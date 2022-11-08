@@ -29,10 +29,10 @@ public class BookService {
     public Book update(Book requestBody) {
         Integer id = requestBody.getId();
         Book record = bookRepository.findById(id).get();
-        record.setName(record.getName());
-        record.setPrice(record.getPrice());
-        record.setCategory(record.getCategory());
-        record.setAuthor(record.getAuthor());
+        record.setName(requestBody.getName());
+        record.setPrice(requestBody.getPrice());
+        record.setCategory(requestBody.getCategory());
+        record.setAuthor(requestBody.getAuthor());
 
         record = bookRepository.save(record);
         return record;
