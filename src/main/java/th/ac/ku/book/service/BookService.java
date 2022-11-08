@@ -32,6 +32,7 @@ public class BookService {
         record.setName(record.getName());
         record.setPrice(record.getPrice());
         record.setCategory(record.getCategory());
+        record.setAuthor(record.getAuthor());
 
         record = bookRepository.save(record);
         return record;
@@ -43,11 +44,19 @@ public class BookService {
         return record;
     }
 
+    public boolean isBookAvailable(String name) {
+        return bookRepository.findByName(name) == null;
+    }
+
     public Book getBookByName(String name) {
         return bookRepository.findByName(name);
     }
 
     public List<Book> getBookByCategory(String category) {
+        return bookRepository.findByCategory(category);
+    }
+
+    public List<Book> getBookByAuthor(String category) {
         return bookRepository.findByCategory(category);
     }
 }
