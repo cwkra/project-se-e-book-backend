@@ -47,7 +47,7 @@ public class RegistationTest {
         WebElement userNameField = driver.findElement(By.id("inputUsername"));
         WebElement passwordField = driver.findElement(By.id("inputPassword"));
         WebElement emailField = driver.findElement(By.id("inputEmail"));
-
+        WebElement roleField = driver.findElement(By.id("inputRole"));
 
         WebElement submitButton = driver.findElement(By.id("submit-button"));
 
@@ -59,6 +59,7 @@ public class RegistationTest {
        userNameField.sendKeys("test1");
        passwordField.sendKeys("1104200178882");
        emailField.sendKeys("panisra.w@ku.th");
+       roleField.isSelected();
 
         submitButton.click();
 
