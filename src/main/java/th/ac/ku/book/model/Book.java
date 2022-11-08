@@ -18,6 +18,8 @@ public class Book {
 
     private String category;
 
+    private String author;
+
     public Integer getId() {
         return id;
     }
@@ -48,5 +50,13 @@ public class Book {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
